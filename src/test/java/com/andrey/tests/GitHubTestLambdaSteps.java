@@ -24,16 +24,16 @@ public class GitHubTestLambdaSteps extends BaseTest {
         step("Открыть главную страницу", () -> {
             gitHubSteps.openPage();
         });
-        step("Ввести в поиске "+GithubPage.repoName+" и нажать Enter", () -> {
+        step("Ввести в поиске " + GithubPage.repoName + " и нажать Enter", () -> {
             gitHubSteps.fillSearchAndPressEnter(GithubPage.repoName);
         });
-        step("Кликнуть на репозиторий "+GithubPage.repoName, () -> {
+        step("Кликнуть на репозиторий " + GithubPage.repoName, () -> {
             gitHubSteps.clickOnRepo(GithubPage.repoName);
         });
         step("Кликнуть на Issues", () -> {
             gitHubSteps.clickOnIssues();
         });
-        step("В Issue под номером '" + GithubPage.issueNum + "' присутствует текст: " +GithubPage.issueText, () -> {
+        step("В Issue под номером '" + GithubPage.issueNum + "' присутствует текст: " + GithubPage.issueText, () -> {
             gitHubSteps.checkTextInIssue(GithubPage.issueNum, GithubPage.issueText);
         });
     }
