@@ -1,5 +1,6 @@
-package com.andrey.pages;
+package com.andrey.steps;
 
+import com.andrey.pages.GithubPage;
 import io.qameta.allure.Step;
 
 public class GitHubSteps {

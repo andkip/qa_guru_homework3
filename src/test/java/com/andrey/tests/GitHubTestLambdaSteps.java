@@ -1,6 +1,6 @@
 package com.andrey.tests;
 
-import com.andrey.pages.GitHubSteps;
+import com.andrey.steps.GitHubSteps;
 import com.andrey.pages.GithubPage;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Link;
