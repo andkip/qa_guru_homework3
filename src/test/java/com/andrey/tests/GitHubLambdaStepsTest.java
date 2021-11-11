@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 
 
-public class GitHubTestLambdaSteps extends BaseTest {
+public class GitHubLambdaStepsTest extends BaseTest {
 
     GitHubSteps gitHubSteps = new GitHubSteps();
 
@@ -20,7 +20,7 @@ public class GitHubTestLambdaSteps extends BaseTest {
     @Feature("Поиск на GitHub")
     @DisplayName("Поиск репозитория на GitHub. Lambda Steps")
     @Link(name = "GitHub", url = "https://github.com")
-    public void selenideSearchTestLambdaSteps() {
+    public void selenideSearchLambdaStepsTest() {
         step("Открыть главную страницу", () -> {
             gitHubSteps.openPage();
         });

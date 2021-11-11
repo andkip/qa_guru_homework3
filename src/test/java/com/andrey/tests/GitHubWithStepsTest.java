@@ -1,28 +1,25 @@
 package com.andrey.tests;
 
+import com.andrey.steps.GitHubSteps;
 import com.andrey.pages.GithubPage;
-import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Link;
 import io.qameta.allure.Owner;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 
-public class GitHubTestListener extends BaseTest {
+public class GitHubWithStepsTest extends BaseTest {
 
-    GithubPage githubPage = new GithubPage();
+    GitHubSteps gitHubSteps = new GitHubSteps();
 
     @Test
     @Owner("akiprushin")
     @Feature("Поиск на GitHub")
-    @DisplayName("Поиск репозитория на GitHub. Listener")
+    @DisplayName("Поиск репозитория на GitHub. Шаги с аннотацией @Step")
     @Link(name = "GitHub", url = "https://github.com")
-    public void selenideSearchTestListener() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
-        githubPage.openPage()
+    public void selenideSearchWithStepsTest() {
+        gitHubSteps.openPage()
                 .fillSearchAndPressEnter(GithubPage.repoName)
                 .clickOnRepo(GithubPage.repoName)
                 .clickOnIssues()
