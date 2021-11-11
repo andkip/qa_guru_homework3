@@ -21,6 +21,7 @@ public class GitHubTestListener extends BaseTest {
     @Link(name = "GitHub", url = "https://github.com")
     public void selenideSearchTestListener() {
         SelenideLogger.addListener("allure", new AllureSelenide());
+
         githubPage.openPage()
                 .fillSearchAndPressEnter(GithubPage.repoName)
                 .clickOnRepo(GithubPage.repoName)
