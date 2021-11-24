@@ -1,7 +1,8 @@
-package com.andrey.tests;
+package com.andrey.tests.stepsTests;
 
 import com.andrey.steps.GitHubSteps;
 import com.andrey.pages.GithubPage;
+import com.andrey.tests.BaseTest;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Link;
 import io.qameta.allure.Owner;

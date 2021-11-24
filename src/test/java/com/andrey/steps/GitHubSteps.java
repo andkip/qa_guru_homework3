@@ -19,6 +19,12 @@ public class GitHubSteps {
         return this;
     }
 
+    @Step("Поиск репозитория с названием: \"{0}\"")
+    public GitHubSteps checkRepoExist(String repository) {
+        githubPage.checkRepoExist(repository);
+        return this;
+    }
+
     @Step("Кликнуть на репозиторий \"{0}\"")
     public GitHubSteps clickOnRepo(String value) {
         githubPage.clickOnRepo(value);
