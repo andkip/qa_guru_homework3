@@ -1,6 +1,7 @@
-package com.andrey.tests;
+package com.andrey.tests.stepsTests;
 
 import com.andrey.pages.GithubPage;
+import com.andrey.tests.BaseTest;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Link;
