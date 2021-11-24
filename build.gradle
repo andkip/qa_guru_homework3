@@ -24,12 +24,6 @@ dependencies {
             "org.slf4j:slf4j-simple:1.7.29")
 }
 
-
 test {
     useJUnitPlatform()
-}
-compileJava.options.encoding = 'UTF-8'
-
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
 }

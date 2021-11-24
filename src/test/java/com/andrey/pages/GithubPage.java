@@ -3,6 +3,7 @@ package com.andrey.pages;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.openqa.selenium.By.linkText;
@@ -16,10 +17,10 @@ public class GithubPage {
             issueText = "Some Issue";
     private SelenideElement
             searchInput = $("[name=q]"),
+            repositoriesButton = $("[data-search-type=Repositories]"),
             issues = $(partialLinkText("Issues"));
 
     // actions
-
     public GithubPage openPage() {
         open("https://github.com");
         return this;
@@ -28,6 +29,12 @@ public class GithubPage {
     public GithubPage fillSearchAndPressEnter(String value) {
         searchInput.click();
         searchInput.setValue(value).pressEnter();
+        repositoriesButton.shouldBe(visible);
+        return this;
+    }
+
+    public GithubPage checkRepoExist(String repository) {
+        $(linkText(repository)).shouldBe(visible);
         return this;
     }
 
