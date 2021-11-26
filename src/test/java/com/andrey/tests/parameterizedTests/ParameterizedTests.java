@@ -44,8 +44,7 @@ public class ParameterizedTests extends BaseTest {
         return Stream.of(
                 Arguments.of("influxdata/influxdb", "Scalable datastore for metrics, events, and real-time analytics"),
                 Arguments.of("cucumber/cucumber-jvm", "Cucumber for the JVM"),
-                Arguments.of("SeleniumHQ/selenium", "A browser automation framework and ecosystem")
-        );
+                Arguments.of("SeleniumHQ/selenium", "A browser automation framework and ecosystem"));
     }
 
     @MethodSource
