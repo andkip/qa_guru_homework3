@@ -4,8 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static org.openqa.selenium.By.linkText;
 import static org.openqa.selenium.By.partialLinkText;
 
@@ -51,6 +50,12 @@ public class GithubPage {
     public GithubPage checkTextInIssue(String issueNum, String issueText) {
         $("[aria-label=Issues] div").$$("div").findBy(text("#" + issueNum))
                 .shouldHave(text(issueText));
+        return this;
+    }
+
+    public GithubPage checkTextUnderRepoName(String repoText) {
+        $$(".mb-1").findBy(text(repoText))
+                .shouldBe(visible);
         return this;
     }
 }

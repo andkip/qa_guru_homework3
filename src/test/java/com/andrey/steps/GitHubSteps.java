@@ -42,4 +42,10 @@ public class GitHubSteps {
         githubPage.checkTextInIssue(issueNum, issueText);
         return this;
     }
+
+    @Step("В описании репозитория присутствует текст: \"{0}\"")
+    public GitHubSteps checkTextUnderRepoName(String repoText) {
+        githubPage.checkTextUnderRepoName(repoText);
+        return this;
+    }
 }
